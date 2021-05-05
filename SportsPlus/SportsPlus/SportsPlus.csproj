@@ -8,4 +8,8 @@
     <ApplicationIcon>SportsPlus - Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MetroModernUI" Version="1.4.0" />
+  </ItemGroup>
+
 </Project>
