@@ -1,62 +1,26 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "MetroModernUI/1.4.0": {
-        "type": "package",
-        "compile": {
-          "lib/net/MetroFramework.Design.dll": {},
-          "lib/net/MetroFramework.Fonts.dll": {},
-          "lib/net/MetroFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net/MetroFramework.Design.dll": {},
-          "lib/net/MetroFramework.Fonts.dll": {},
-          "lib/net/MetroFramework.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "MetroModernUI/1.4.0": {
-      "sha512": "p2F3w8bF1tb0tpkDceEVO65UYMKnJxdQyNxVyl/OjrFZHighicLYZDppKkiqmvBZ10XUi2mqHiIJUzXBP3GElQ==",
-      "type": "package",
-      "path": "metromodernui/1.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net/MetroFramework.Design.dll",
-        "lib/net/MetroFramework.Fonts.dll",
-        "lib/net/MetroFramework.dll",
-        "metromodernui.1.4.0.nupkg.sha512",
-        "metromodernui.nuspec"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "MetroModernUI >= 1.4.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\64789\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Cristian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\64789\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
+      "projectUniqueName": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
       "projectName": "SportsPlus",
-      "projectPath": "C:\\Users\\64789\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
-      "packagesPath": "C:\\Users\\64789\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\64789\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\obj\\",
+      "projectPath": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
+      "packagesPath": "C:\\Users\\Cristian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\64789\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Cristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -81,12 +45,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
-        "dependencies": {
-          "MetroModernUI": {
-            "target": "Package",
-            "version": "[1.4.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -97,16 +55,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -115,20 +63,8 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MetroModernUI 1.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "MetroModernUI",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }
