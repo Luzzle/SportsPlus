@@ -14,10 +14,6 @@ C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netco
 C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.genruntimeconfig.cache
 C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.MainForm.resources
 C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.Loader.resources
-C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\MetroFramework.Design.dll
-C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\MetroFramework.Fonts.dll
-C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\MetroFramework.dll
-C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.csproj.CopyComplete
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\SportsPlus.exe
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\SportsPlus.deps.json
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\bin\Debug\netcoreapp3.1\SportsPlus.runtimeconfig.json
@@ -34,3 +30,4 @@ C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\ne
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.dll
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.pdb
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.genruntimeconfig.cache
+C:\Users\64789\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.Properties.Resources.resources

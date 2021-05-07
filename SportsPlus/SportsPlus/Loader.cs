@@ -17,14 +17,17 @@ namespace SportsPlus
             this.LoadingLabel.Location =  new System.Drawing.Point((this.Size.Width / 2 - LoadingLabel.Size.Width / 2), LoadingLabel.Location.Y);
         }
 
-        public void SetLoadProgress(int progress)
+       public void CloseForm()
         {
-            this.ProgressBar.Value = progress;
+            this.Close();
         }
 
         private void Loader_Load(object sender, EventArgs e)
         {
+            this.pictureBox1.Location = new System.Drawing.Point((this.Size.Width / 2 - pictureBox1.Size.Width / 2), pictureBox1.Location.Y);
             SportsPlus.Initialize(this);
+            MainForm mainForm = new MainForm(this);
+            mainForm.Show();
         }
 
 

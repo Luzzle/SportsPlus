@@ -29,46 +29,40 @@ namespace SportsPlus
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loader));
             this.LoadingLabel = new System.Windows.Forms.Label();
-            this.ProgressBar = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LoadingLabel
             // 
             this.LoadingLabel.AutoSize = true;
             this.LoadingLabel.Font = new System.Drawing.Font("Segoe UI Symbol", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoadingLabel.Location = new System.Drawing.Point(133, 166);
+            this.LoadingLabel.ForeColor = System.Drawing.Color.Black;
+            this.LoadingLabel.Location = new System.Drawing.Point(145, 136);
             this.LoadingLabel.Name = "LoadingLabel";
             this.LoadingLabel.Size = new System.Drawing.Size(188, 32);
             this.LoadingLabel.TabIndex = 0;
             this.LoadingLabel.Text = "[LOADING TEXT]";
             // 
-            // ProgressBar
+            // pictureBox1
             // 
-            this.ProgressBar.Location = new System.Drawing.Point(12, 126);
-            this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(428, 23);
-            this.ProgressBar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(108, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 50);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SPORTSPLUS";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(464, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Loader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(452, 225);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ProgressBar);
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.ClientSize = new System.Drawing.Size(496, 193);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LoadingLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -76,6 +70,7 @@ namespace SportsPlus
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loader";
             this.Load += new System.EventHandler(this.Loader_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +79,6 @@ namespace SportsPlus
         #endregion
 
         public System.Windows.Forms.Label LoadingLabel;
-        private System.Windows.Forms.ProgressBar ProgressBar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

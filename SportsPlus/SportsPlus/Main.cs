@@ -17,7 +17,11 @@ namespace SportsPlus
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loader());
+
+            Loader loader = new Loader();
+            loader.Show();
+
+            Application.Run();
         }
     }
 }
