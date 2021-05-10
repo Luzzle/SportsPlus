@@ -9,7 +9,7 @@ namespace SportsPlus
     {
 
         public string Name = "";
-        public string studentHouse = "";
+        public string StudentHouse = "";
         public int TotalPoints = 0;
 
     }
