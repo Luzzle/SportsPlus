@@ -5,7 +5,7 @@
 //
 
 using System;
-using System.Drawing;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 
@@ -16,7 +16,8 @@ namespace SportsPlus
     {
         Loader loader;
         // Form Class Constructor
-        public MainForm(Loader frmLoader) {     
+        public MainForm(Loader frmLoader) { 
+            
             InitializeComponent();
             loader = frmLoader;
             
@@ -26,6 +27,7 @@ namespace SportsPlus
         private void MainForm_Load(object sender, EventArgs e)
         {
             loader.CloseForm();
+              
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -8,19 +8,21 @@ namespace SportsPlus
 
     static class SportsPlus
     {
+        // Create Student Dictionary, accessed by all files.
         public static Dictionary<string, Student> studentDictionary = new Dictionary<string, Student>();
 
         static string STUDENT_PLACEHOLDER_STRING = "This is a placeholder file, please replace with a csv of your schools students in the format [Student ID, Student Name, Student House";
-
+        
+        // Initializer Function, calls all the below functions and modifies the loader text to communicate to the user.
         public static void Initialize(Loader loader)
         {
+           
             loader.ChangeLoadingText("Checking Files...");
             CheckFiles();
 
             loader.ChangeLoadingText("Loading Students...");
             LoadStudents();
-
-            
+       
             loader.ChangeLoadingText("Loading Events...");
             LoadEvents();
 
@@ -34,42 +36,50 @@ namespace SportsPlus
         private static void CheckFiles()
         { 
             
+            // Checks to make sure all important files exist, if not create placeholder files which are checked later on.
             if (!Directory.Exists(@"C:\SportsPlus\")) Directory.CreateDirectory(@"C:\SportsPlus\");
             
             if (!File.Exists(@"C:\SportsPlus\Students.csv")) {
+                // Create the new studentsList file and write the placeholder string to the file. 
                 FileStream studentsList = File.Create(@"C:\SportsPlus\Students.csv");
                 studentsList.Close();
                 File.WriteAllText(@"C:\SportsPlus\Students.csv", STUDENT_PLACEHOLDER_STRING);
             }
 
+            // Create blank records file
             if (!File.Exists(@"C:\SportsPlus\Records.txt")) File.Create(@"C:\SportsPlus\Records.txt");
             
+            // TODO: ADD THE REST OF THE CHECKS LATER
 
         }
 
 
         private static void LoadEvents()
         {
-
+            // TODO: LOAD EVENTS FROM CSV [EVENT_ID,EVENT_NAME] AND STORE IN DICTIONARY, SAME FORMAT
         }
 
         private static void LoadRecords()
         {
-
+            // TODO: LOAD RECORD INFORMATION FROM RECORDS CSV IN FORMAT [EVENT_ID,RECORD]
         }
 
         private static void LoadStudents()
         {
+            // Create array of all students
             string[] studentsList = File.ReadAllLines(@"C:\SportsPlus\Students.csv");
             
+            // There should never be an instance of this, but if the file is empty allow the user to reset to the placeholder state.
             if (studentsList.Length == 0)
             {
+                // Show a messagebox and record the result.
                 DialogResult result = MessageBox.Show("There was an unkown error, would you like to reset the students list?", "Error detected", MessageBoxButtons.YesNo);
                 
                 switch (result)
                 {
                     case DialogResult.Yes:
                         {
+                            // Delete the file and regenerate it
                             MessageBox.Show(@"SportsPlus will now close. Please reopen the application.", "Notification");
                             File.Delete(@"C:\SportsPlus\Students.csv");
                             Environment.Exit(0);
@@ -78,6 +88,7 @@ namespace SportsPlus
 
                     case DialogResult.No:
                         {
+                            // Quit the application
                             Environment.Exit(0);
                             break;
                         }
@@ -87,14 +98,17 @@ namespace SportsPlus
 
             if (studentsList[0] == STUDENT_PLACEHOLDER_STRING)
             {
-                MessageBox.Show(@"Please replace the placeholder Studentslist csv at C:\SportsPlus\Students.csv before you can use the program!");
+                // Prompt the user to replace the file with the csv provided by the school
+                MessageBox.Show(@"Please replace the placeholder Students List csv at C:\SportsPlus\Students.csv before you can use the program!");
                 Environment.Exit(0);
             }
 
            for (int i = 0; i < studentsList.Length; i++)
             {
+                // Split the record from the csv
                 string[] studentData = studentsList[i].Split(",");
 
+                // Create the new student class and apphend it to the dictionary.
                 Student studentObj = new Student();
                 studentObj.Name = studentData[1];
                 studentObj.studentHouse = studentData[2];
