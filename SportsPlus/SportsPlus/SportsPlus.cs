@@ -111,7 +111,7 @@ namespace SportsPlus
                 // Create the new student class and apphend it to the dictionary.
                 Student studentObj = new Student();
                 studentObj.Name = studentData[1];
-                studentObj.studentHouse = studentData[2];
+                studentObj.StudentHouse = studentData[2];
                 studentObj.TotalPoints = 0;
                 studentDictionary.Add(studentData[0], studentObj);
                 
