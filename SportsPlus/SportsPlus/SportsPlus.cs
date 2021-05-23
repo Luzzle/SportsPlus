@@ -10,8 +10,9 @@ namespace SportsPlus
     {
         // Create Student Dictionary, accessed by all files.
         public static Dictionary<string, Student> studentDictionary = new Dictionary<string, Student>();
+        public static Dictionary<string, Event> eventDictionary = new Dictionary<string, Event>();
 
-        static string STUDENT_PLACEHOLDER_STRING = "This is a placeholder file, please replace with a csv of your schools students in the format [Student ID, Student Name, Student House";
+        static string STUDENT_PLACEHOLDER_STRING = "This is a placeholder file, please replace with a csv of your schools students in the format [Student ID, Student Name, Student House]";
         
         // Initializer Function, calls all the below functions and modifies the loader text to communicate to the user.
         public static void Initialize(Loader loader)
@@ -34,11 +35,11 @@ namespace SportsPlus
         }
 
         private static void CheckFiles()
-        { 
-            
+        {
+
             // Checks to make sure all important files exist, if not create placeholder files which are checked later on.
             if (!Directory.Exists(@"C:\SportsPlus\")) Directory.CreateDirectory(@"C:\SportsPlus\");
-            
+
             if (!File.Exists(@"C:\SportsPlus\Students.csv")) {
                 // Create the new studentsList file and write the placeholder string to the file. 
                 FileStream studentsList = File.Create(@"C:\SportsPlus\Students.csv");
@@ -47,8 +48,17 @@ namespace SportsPlus
             }
 
             // Create blank records file
-            if (!File.Exists(@"C:\SportsPlus\Records.txt")) File.Create(@"C:\SportsPlus\Records.txt");
-            
+            if (!File.Exists(@"C:\SportsPlus\Records.csv")) { 
+                FileStream fs = File.Create(@"C:\SportsPlus\Records.csv");
+                fs.Close();
+            }
+
+            // Create blank records file
+            if (!File.Exists(@"C:\SportsPlus\Events.csv")) {
+                FileStream fs = File.Create(@"C:\SportsPlus\Events.csv");
+                fs.Close();
+            }
+
             // TODO: ADD THE REST OF THE CHECKS LATER
 
         }
@@ -56,7 +66,29 @@ namespace SportsPlus
 
         private static void LoadEvents()
         {
-            // TODO: LOAD EVENTS FROM CSV [EVENT_ID,EVENT_NAME] AND STORE IN DICTIONARY, SAME FORMAT
+            string[] eventsList = File.ReadAllLines(@"C:\SportsPlus\Events.csv");
+
+            if (eventsList.Length == 0)
+            {
+                MessageBox.Show("Please add events to the EventsList csv.", "Error Detected", MessageBoxButtons.OK);
+                Environment.Exit(0);
+            }
+
+            for (int i = 0; i < eventsList.Length; i++)
+            {
+                string[] eventData = eventsList[i].Split(",");
+
+                Event eventObj = new Event();
+                eventObj.Event_Name = eventData[1];
+
+                if (eventData[2] == "1")
+                {
+                    eventObj.Distance = true;
+                }
+
+                eventDictionary.Add(eventData[0], eventObj);
+            }
+
         }
 
         private static void LoadRecords()
@@ -111,7 +143,7 @@ namespace SportsPlus
                 // Create the new student class and apphend it to the dictionary.
                 Student studentObj = new Student();
                 studentObj.Name = studentData[1];
-                studentObj.studentHouse = studentData[2];
+                studentObj.StudentHouse = studentData[2];
                 studentObj.TotalPoints = 0;
                 studentDictionary.Add(studentData[0], studentObj);
                 

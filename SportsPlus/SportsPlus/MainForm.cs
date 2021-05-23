@@ -5,6 +5,7 @@
 //
 
 using System;
+using System.Resources;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -23,10 +24,21 @@ namespace SportsPlus
             
         }
 
+        private void LoadEvents()
+        {
+            listBox1.Items.Clear();
+            foreach (var i in SportsPlus.eventDictionary.Values)
+            {
+                listBox1.Items.Add(i.Event_Name);
+            }
+        }
+
         // Form Load Event
         private void MainForm_Load(object sender, EventArgs e)
         {
+           
             loader.CloseForm();
+            LoadEvents();
               
         }
 
@@ -34,5 +46,8 @@ namespace SportsPlus
         {
             Application.Exit();
         }
+
+       
+        
     }
 }
