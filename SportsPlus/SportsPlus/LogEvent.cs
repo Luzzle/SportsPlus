@@ -10,14 +10,19 @@ namespace SportsPlus
 {
     public partial class LogEvent : Form
     {
-        public LogEvent(Event @event)
+        Event loadedEvent;
+        string loadedAge;
+        public LogEvent(Event @event, string Age)
         {
+            loadedEvent = @event;
+            loadedAge = Age;
             InitializeComponent();
         }
 
         private void LogEvent_Load(object sender, EventArgs e)
         {
-
+            lblTitle.Text += loadedEvent.Event_Name;
+            lblAge.Text += loadedAge;
         }
     }
 }

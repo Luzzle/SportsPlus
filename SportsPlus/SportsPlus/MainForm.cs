@@ -49,7 +49,14 @@ namespace SportsPlus
 
         private void btnLogEvent_Click(object sender, EventArgs e)
         {
-            
+            var f = new SelectEvent();
+            f.Show();
+        }
+
+        private void btnDebug_Click(object sender, EventArgs e)
+        {
+            var f = new Debug();
+            f.Show();
         }
     }
 }

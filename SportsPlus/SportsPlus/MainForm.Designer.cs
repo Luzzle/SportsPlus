@@ -30,6 +30,7 @@ namespace SportsPlus
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDebug = new System.Windows.Forms.Button();
             this.btnResetCarnival = new System.Windows.Forms.Button();
             this.btnBackups = new System.Windows.Forms.Button();
             this.btnGenerateReport = new System.Windows.Forms.Button();
@@ -65,6 +66,7 @@ namespace SportsPlus
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnDebug);
             this.panel1.Controls.Add(this.btnResetCarnival);
             this.panel1.Controls.Add(this.btnBackups);
             this.panel1.Controls.Add(this.btnGenerateReport);
@@ -76,6 +78,20 @@ namespace SportsPlus
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 735);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDebug
+            // 
+            this.btnDebug.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDebug.FlatAppearance.BorderSize = 0;
+            this.btnDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebug.Location = new System.Drawing.Point(0, 375);
+            this.btnDebug.Name = "btnDebug";
+            this.btnDebug.Size = new System.Drawing.Size(198, 57);
+            this.btnDebug.TabIndex = 5;
+            this.btnDebug.Text = "Debug Menu";
+            this.btnDebug.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDebug.UseVisualStyleBackColor = true;
+            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // btnResetCarnival
             // 
@@ -332,6 +348,7 @@ namespace SportsPlus
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SportsPlus";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -373,6 +390,7 @@ namespace SportsPlus
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnDebug;
     }
 }
 
