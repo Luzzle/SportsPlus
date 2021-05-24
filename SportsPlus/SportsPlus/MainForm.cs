@@ -47,7 +47,9 @@ namespace SportsPlus
             Application.Exit();
         }
 
-       
-        
+        private void btnLogEvent_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

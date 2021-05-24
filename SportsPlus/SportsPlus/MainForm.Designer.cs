@@ -141,6 +141,7 @@ namespace SportsPlus
             this.btnLogEvent.Text = "Log Event";
             this.btnLogEvent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogEvent.UseVisualStyleBackColor = true;
+            this.btnLogEvent.Click += new System.EventHandler(this.btnLogEvent_Click);
             // 
             // pictureBox1
             // 
@@ -326,6 +327,7 @@ namespace SportsPlus
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -4,13 +4,11 @@ using System.Text;
 
 namespace SportsPlus
 {
-    public class Event
+    class Log
     {
 
-        public string Event_Name;
-        public bool Distance = false;
-
-
+        public Student studentDetails;
+        public int LogData;
 
     }
 }

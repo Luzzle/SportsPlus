@@ -5,7 +5,7 @@ using System.Text;
 namespace SportsPlus
 {
    
-    class Student
+    public class Student
     {
 
         public string Name = "";

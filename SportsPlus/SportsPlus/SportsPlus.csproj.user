@@ -4,7 +4,13 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="EventLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogEvent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
