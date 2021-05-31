@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\64789\\Documents\\Github\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj": {}
+    "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\64789\\Documents\\Github\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj": {
+    "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\64789\\Documents\\Github\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
+        "projectUniqueName": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
         "projectName": "SportsPlus",
-        "projectPath": "C:\\Users\\64789\\Documents\\Github\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
-        "packagesPath": "C:\\Users\\64789\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\64789\\Documents\\Github\\SportsPlus\\SportsPlus\\SportsPlus\\obj\\",
+        "projectPath": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
+        "packagesPath": "C:\\Users\\Cristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\64789\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -58,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

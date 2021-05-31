@@ -7,9 +7,6 @@
     <Compile Update="Debug.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="EventLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
