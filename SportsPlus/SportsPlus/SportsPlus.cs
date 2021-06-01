@@ -11,7 +11,7 @@ namespace SportsPlus
         // Create Student Dictionary, accessed by all files.
         public static Dictionary<string, Student> studentDictionary = new Dictionary<string, Student>();
         public static Dictionary<string, Event> eventDictionary = new Dictionary<string, Event>();
-        public static Dictionary<string, Log[]> eventLogs = new Dictionary<string, Log[]>();
+        public static Dictionary<string, List<Log>> eventLogs = new Dictionary<string, List<Log>>();
 
         static string STUDENT_PLACEHOLDER_STRING = "This is a placeholder file, please replace with a csv of your schools students in the format [Student ID, Student Name, Student House]";
         
@@ -60,6 +60,12 @@ namespace SportsPlus
                 fs.Close();
             }
 
+            if (!File.Exists(@"C:\SportsPlus\Logs.csv"))
+            {
+                FileStream fs = File.Create(@"C:\SportsPlus\Logs.csv");
+                fs.Close();
+            }
+
             // TODO: ADD THE REST OF THE CHECKS LATER
 
         }
@@ -80,6 +86,7 @@ namespace SportsPlus
                 string[] eventData = eventsList[i].Split(",");
 
                 Event eventObj = new Event();
+                eventObj.ID = eventData[0];
                 eventObj.Event_Name = eventData[1];
 
                 if (eventData[2] == "1")
@@ -88,6 +95,44 @@ namespace SportsPlus
                 }
 
                 eventDictionary.Add(eventData[0], eventObj);
+            }
+
+            string[] eventLogs = File.ReadAllLines(@"C:\SportsPlus\Logs.csv");
+
+
+            for (int i = 0; i < eventLogs.Length; i++)
+            {
+
+                string[] lineSplit = eventLogs[i].Split(",");
+                int logCount = 0;
+                List<Log> LogList = new List<Log>();
+    
+                if (lineSplit[0].StartsWith("EA"))
+                {
+                    logCount = int.Parse(lineSplit[1]);
+
+
+                    for (int k = 1; k <= logCount; k++)
+                    {
+                        string[] logEntry = eventLogs[i + k].Split(",");
+
+                        Student studentRef = SportsPlus.studentDictionary[logEntry[0]];
+
+                        Log newLog = new Log();
+                        newLog.studentDetails = studentRef;
+                        newLog.TD = int.Parse(logEntry[1]);
+                        newLog.Place = int.Parse(logEntry[2]);
+                        newLog.Points = int.Parse(logEntry[3]);
+
+                        LogList.Add(newLog);
+                    }
+
+                    SportsPlus.eventLogs.Add(lineSplit[0], LogList);
+
+                }
+
+                
+
             }
 
         }

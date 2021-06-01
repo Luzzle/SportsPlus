@@ -5,7 +5,7 @@
 //
 
 using System;
-using System.Resources;
+using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -44,7 +44,10 @@ namespace SportsPlus
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+
+            WriteEventLogsToFile();
             Application.Exit();
+
         }
 
         private void btnLogEvent_Click(object sender, EventArgs e)
@@ -57,6 +60,30 @@ namespace SportsPlus
         {
             var f = new Debug();
             f.Show();
+        }
+    
+        private void WriteEventLogsToFile()
+        {
+            File.WriteAllText(@"C:\SportsPlus\Logs.csv", string.Empty);
+
+            StreamWriter sw = new StreamWriter(@"C:\SportsPlus\Logs.csv", append: true);
+
+            foreach (KeyValuePair<string, List<Log>> i in SportsPlus.eventLogs)
+            {
+                MessageBox.Show(i.Value.Count.ToString());
+
+                string eventLine = i.Key + "," + i.Value.Count;
+                sw.WriteLine(eventLine);
+
+                foreach (var k in i.Value)
+                {
+                    string logLine = k.studentDetails.ID + "," + k.TD + "," + k.Place + "," + k.Points;
+                    sw.WriteLine(logLine);
+                }
+
+            }
+
+            sw.Close();
         }
     }
 }

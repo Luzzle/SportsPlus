@@ -27,6 +27,19 @@ namespace SportsPlus
                 listBox2.Items.Add(i.Name + " " + i.StudentHouse);
             }
 
+            foreach (List<Log> i in SportsPlus.eventLogs.Values)
+            {
+                for (int k = 0; k < i.Count; k++)
+                {
+                    listBox3.Items.Add(i[k].studentDetails.Name + ": " + i[k].TD);
+                }
+            }
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

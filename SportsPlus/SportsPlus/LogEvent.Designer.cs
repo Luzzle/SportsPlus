@@ -34,16 +34,10 @@ namespace SportsPlus
             this.btnSaveEvent = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblStuID = new System.Windows.Forms.Label();
-            this.stuID1 = new System.Windows.Forms.TextBox();
-            this.stuName1 = new System.Windows.Forms.TextBox();
             this.lblStuName = new System.Windows.Forms.Label();
-            this.stuHouse1 = new System.Windows.Forms.TextBox();
             this.lblStuHouse = new System.Windows.Forms.Label();
-            this.stuTD1 = new System.Windows.Forms.TextBox();
             this.lblTD = new System.Windows.Forms.Label();
-            this.stuPlace1 = new System.Windows.Forms.TextBox();
             this.lblPlace = new System.Windows.Forms.Label();
-            this.stuPoints1 = new System.Windows.Forms.TextBox();
             this.lblPoints = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,22 +96,6 @@ namespace SportsPlus
             this.lblStuID.TabIndex = 1;
             this.lblStuID.Text = "Student ID";
             // 
-            // stuID1
-            // 
-            this.stuID1.Location = new System.Drawing.Point(12, 134);
-            this.stuID1.Name = "stuID1";
-            this.stuID1.Size = new System.Drawing.Size(100, 23);
-            this.stuID1.TabIndex = 2;
-            this.stuID1.TextChanged += new System.EventHandler(this.stuCheckID);
-            // 
-            // stuName1
-            // 
-            this.stuName1.Location = new System.Drawing.Point(118, 134);
-            this.stuName1.Name = "stuName1";
-            this.stuName1.ReadOnly = true;
-            this.stuName1.Size = new System.Drawing.Size(129, 23);
-            this.stuName1.TabIndex = 3;
-            // 
             // lblStuName
             // 
             this.lblStuName.AutoSize = true;
@@ -126,14 +104,6 @@ namespace SportsPlus
             this.lblStuName.Size = new System.Drawing.Size(83, 15);
             this.lblStuName.TabIndex = 4;
             this.lblStuName.Text = "Student Name";
-            // 
-            // stuHouse1
-            // 
-            this.stuHouse1.Location = new System.Drawing.Point(253, 134);
-            this.stuHouse1.Name = "stuHouse1";
-            this.stuHouse1.ReadOnly = true;
-            this.stuHouse1.Size = new System.Drawing.Size(85, 23);
-            this.stuHouse1.TabIndex = 5;
             // 
             // lblStuHouse
             // 
@@ -144,13 +114,6 @@ namespace SportsPlus
             this.lblStuHouse.TabIndex = 6;
             this.lblStuHouse.Text = "Student House";
             // 
-            // stuTD1
-            // 
-            this.stuTD1.Location = new System.Drawing.Point(344, 134);
-            this.stuTD1.Name = "stuTD1";
-            this.stuTD1.Size = new System.Drawing.Size(139, 23);
-            this.stuTD1.TabIndex = 7;
-            // 
             // lblTD
             // 
             this.lblTD.AutoSize = true;
@@ -160,13 +123,6 @@ namespace SportsPlus
             this.lblTD.TabIndex = 8;
             this.lblTD.Text = "[Time / Distance Label]";
             // 
-            // stuPlace1
-            // 
-            this.stuPlace1.Location = new System.Drawing.Point(489, 134);
-            this.stuPlace1.Name = "stuPlace1";
-            this.stuPlace1.Size = new System.Drawing.Size(53, 23);
-            this.stuPlace1.TabIndex = 9;
-            // 
             // lblPlace
             // 
             this.lblPlace.AutoSize = true;
@@ -175,13 +131,6 @@ namespace SportsPlus
             this.lblPlace.Size = new System.Drawing.Size(35, 15);
             this.lblPlace.TabIndex = 10;
             this.lblPlace.Text = "Place";
-            // 
-            // stuPoints1
-            // 
-            this.stuPoints1.Location = new System.Drawing.Point(548, 134);
-            this.stuPoints1.Name = "stuPoints1";
-            this.stuPoints1.Size = new System.Drawing.Size(53, 23);
-            this.stuPoints1.TabIndex = 11;
             // 
             // lblPoints
             // 
@@ -199,20 +148,15 @@ namespace SportsPlus
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(642, 659);
             this.Controls.Add(this.lblPoints);
-            this.Controls.Add(this.stuPoints1);
             this.Controls.Add(this.lblPlace);
-            this.Controls.Add(this.stuPlace1);
             this.Controls.Add(this.lblTD);
-            this.Controls.Add(this.stuTD1);
             this.Controls.Add(this.lblStuHouse);
-            this.Controls.Add(this.stuHouse1);
             this.Controls.Add(this.lblStuName);
-            this.Controls.Add(this.stuName1);
-            this.Controls.Add(this.stuID1);
             this.Controls.Add(this.lblStuID);
             this.Controls.Add(this.panel1);
             this.Name = "LogEvent";
             this.Text = "LogEvent";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogEvent_FormClosing);
             this.Load += new System.EventHandler(this.LogEvent_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -227,16 +171,10 @@ namespace SportsPlus
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddAthlete;
         private System.Windows.Forms.Label lblStuID;
-        private System.Windows.Forms.TextBox stuID1;
-        private System.Windows.Forms.TextBox stuName1;
         private System.Windows.Forms.Label lblStuName;
-        private System.Windows.Forms.TextBox stuHouse1;
         private System.Windows.Forms.Label lblStuHouse;
-        private System.Windows.Forms.TextBox stuTD1;
         private System.Windows.Forms.Label lblTD;
-        private System.Windows.Forms.TextBox stuPlace1;
         private System.Windows.Forms.Label lblPlace;
-        private System.Windows.Forms.TextBox stuPoints1;
         private System.Windows.Forms.Label lblPoints;
     }
 }
