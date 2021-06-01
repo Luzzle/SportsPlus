@@ -7,8 +7,10 @@ namespace SportsPlus
     class Log
     {
 
-        public Student studentDetails;
-        public int LogData;
+        public Student studentDetails = null;
+        public int TD = 0;
+        public int Place = 0;
+        public int Points = 0;
 
     }
 }

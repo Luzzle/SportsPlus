@@ -11,7 +11,7 @@ namespace SportsPlus
         // Create Student Dictionary, accessed by all files.
         public static Dictionary<string, Student> studentDictionary = new Dictionary<string, Student>();
         public static Dictionary<string, Event> eventDictionary = new Dictionary<string, Event>();
-        public static Dictionary<Event, Log[]> eventLogs = new Dictionary<Event, Log[]>();
+        public static Dictionary<string, Log[]> eventLogs = new Dictionary<string, Log[]>();
 
         static string STUDENT_PLACEHOLDER_STRING = "This is a placeholder file, please replace with a csv of your schools students in the format [Student ID, Student Name, Student House]";
         
@@ -143,6 +143,7 @@ namespace SportsPlus
 
                 // Create the new student class and apphend it to the dictionary.
                 Student studentObj = new Student();
+                studentObj.ID = studentData[0];
                 studentObj.Name = studentData[1];
                 studentObj.StudentHouse = studentData[2];
                 studentObj.TotalPoints = 0;

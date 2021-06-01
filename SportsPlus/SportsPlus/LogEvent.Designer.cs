@@ -31,7 +31,7 @@ namespace SportsPlus
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddAthlete = new System.Windows.Forms.Button();
-            this.btnChangeEvent = new System.Windows.Forms.Button();
+            this.btnSaveEvent = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblStuID = new System.Windows.Forms.Label();
             this.stuID1 = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace SportsPlus
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnAddAthlete);
-            this.panel1.Controls.Add(this.btnChangeEvent);
+            this.panel1.Controls.Add(this.btnSaveEvent);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -64,7 +64,7 @@ namespace SportsPlus
             // 
             this.btnAddAthlete.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAddAthlete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAthlete.Location = new System.Drawing.Point(495, 38);
+            this.btnAddAthlete.Location = new System.Drawing.Point(355, 38);
             this.btnAddAthlete.Name = "btnAddAthlete";
             this.btnAddAthlete.Size = new System.Drawing.Size(134, 40);
             this.btnAddAthlete.TabIndex = 2;
@@ -72,16 +72,17 @@ namespace SportsPlus
             this.btnAddAthlete.UseVisualStyleBackColor = false;
             this.btnAddAthlete.Click += new System.EventHandler(this.btnAddAthlete_Click);
             // 
-            // btnChangeEvent
+            // btnSaveEvent
             // 
-            this.btnChangeEvent.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnChangeEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeEvent.Location = new System.Drawing.Point(355, 38);
-            this.btnChangeEvent.Name = "btnChangeEvent";
-            this.btnChangeEvent.Size = new System.Drawing.Size(134, 40);
-            this.btnChangeEvent.TabIndex = 1;
-            this.btnChangeEvent.Text = "Change Event";
-            this.btnChangeEvent.UseVisualStyleBackColor = false;
+            this.btnSaveEvent.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSaveEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveEvent.Location = new System.Drawing.Point(495, 38);
+            this.btnSaveEvent.Name = "btnSaveEvent";
+            this.btnSaveEvent.Size = new System.Drawing.Size(134, 40);
+            this.btnSaveEvent.TabIndex = 1;
+            this.btnSaveEvent.Text = "Save Event";
+            this.btnSaveEvent.UseVisualStyleBackColor = false;
+            this.btnSaveEvent.Click += new System.EventHandler(this.btnSaveEvent_Click);
             // 
             // lblTitle
             // 
@@ -222,7 +223,7 @@ namespace SportsPlus
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnChangeEvent;
+        private System.Windows.Forms.Button btnSaveEvent;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddAthlete;
         private System.Windows.Forms.Label lblStuID;

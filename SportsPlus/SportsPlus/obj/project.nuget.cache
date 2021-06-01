@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pMrz5PH2pwkbr4Pen+0Zar1Jd0pMX+jOPv2d42mocinm1zTGCl7tah4vYSIkQgJihnu5F8mwdnr64xxH966yzQ==",
+  "dgSpecHash": "QiWRzPaIELMazjbGmC+ioLvZ7rB3cjVJJzkU8xwwCO0ct73L1qGvxAWCcQ39mrabiHqRM4h/z+ADpGMtpWZnyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cristian\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\64789\\Documents\\GitHub\\SportsPlus\\SportsPlus\\SportsPlus\\SportsPlus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\64789\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\64789\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -103,5 +103,35 @@ namespace SportsPlus
             stuHouseRef.Text = "";
             
         }
+
+        private void SaveEvent()
+        {
+
+            for (int i = 1; i <= AthleteCount; i++)
+            {
+
+                TextBox tbIDRef = this.Controls["stuID" + i] as TextBox;
+                TextBox tbTDRef = this.Controls["stuTD" + i] as TextBox;
+                TextBox tbPlaceRef = this.Controls["stuPlace" + i] as TextBox;
+                TextBox tbPointsRef = this.Controls["stuPoints" + i] as TextBox;
+
+                Student studentRef = SportsPlus.studentDictionary[tbIDRef.Text];
+
+                Log newLog = new Log();
+                newLog.studentDetails = studentRef;
+                newLog.TD = int.Parse(tbTDRef.Text);
+                newLog.Place = int.Parse(tbPlaceRef.Text);
+                newLog.Points = int.Parse(tbPointsRef.Text);
+
+                
+            }
+
+        }
+
+        private void btnSaveEvent_Click(object sender, EventArgs e)
+        {
+            SaveEvent();
+        }
     }
 }
+
