@@ -42,7 +42,7 @@ namespace SportsPlus
         {
             if (SportsPlus.eventLogs[loadedEvent.ID].Count == 0)
             {
-                AddAthlete();
+                EmptyAthlete();
                 return;
             }
             
@@ -53,22 +53,24 @@ namespace SportsPlus
 
         }
 
-        private void AddAthlete(Log logInfo = null)
+        private void EmptyAthlete()
+        {
+            AthleteCount++;
+
+            createIDTB();
+            createNameTB();
+            createHouseTB();
+            createTDTB();
+            createPlaceTB();
+            createPointsTB();
+
+            EntryOffset += 25;
+        }
+
+        private void AddAthlete(Log logInfo)
         {
 
             AthleteCount++;
-
-            if (logInfo == null)
-            {
-                createIDTB();
-                createNameTB();
-                createHouseTB();
-                createTDTB();
-                createPlaceTB();
-                createPointsTB();
-
-                return;
-            }
 
             createIDTB(logInfo.studentDetails.ID);
             createNameTB(logInfo.studentDetails.Name);
@@ -85,7 +87,7 @@ namespace SportsPlus
             // TO AVOID THE ANNOYING BUG
             this.VerticalScroll.Value = 0;
 
-            AddAthlete();
+            EmptyAthlete();
         }
 
         protected void stuCheckID(object sender, EventArgs e)

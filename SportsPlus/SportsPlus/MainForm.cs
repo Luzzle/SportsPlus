@@ -70,8 +70,6 @@ namespace SportsPlus
 
             foreach (KeyValuePair<string, List<Log>> i in SportsPlus.eventLogs)
             {
-                MessageBox.Show(i.Value.Count.ToString());
-
                 string eventLine = i.Key + "," + i.Value.Count;
                 sw.WriteLine(eventLine);
 
