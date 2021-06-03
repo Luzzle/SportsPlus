@@ -28,8 +28,8 @@ namespace SportsPlus
             loader.ChangeLoadingText("Loading Events...");
             LoadEvents();
 
-            loader.ChangeLoadingText("Loading Records...");
-            LoadRecords();
+            loader.ChangeLoadingText("Loading Points...");
+            LoadPoints();
 
             loader.ChangeLoadingText("Loaded!");
             
@@ -49,8 +49,8 @@ namespace SportsPlus
             }
 
             // Create blank records file
-            if (!File.Exists(@"C:\SportsPlus\Records.csv")) { 
-                FileStream fs = File.Create(@"C:\SportsPlus\Records.csv");
+            if (!File.Exists(@"C:\SportsPlus\Points.csv")) { 
+                FileStream fs = File.Create(@"C:\SportsPlus\Points.csv");
                 fs.Close();
             }
 
@@ -137,9 +137,19 @@ namespace SportsPlus
 
         }
 
-        private static void LoadRecords()
+        private static void LoadPoints()
         {
-            // TODO: LOAD RECORD INFORMATION FROM RECORDS CSV IN FORMAT [EVENT_ID,RECORD]
+            string[] pointsList = File.ReadAllLines(@"C:\SportsPlus\Points.csv");
+
+            for (int i = 0; i < pointsList.Length; i++)
+            {
+
+                string[] pointData = pointsList[i].Split(",");
+
+                SportsPlus.studentDictionary[pointData[0]].TotalPoints = int.Parse(pointData[1]);
+
+
+            }
         }
 
         private static void LoadStudents()

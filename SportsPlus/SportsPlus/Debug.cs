@@ -24,7 +24,7 @@ namespace SportsPlus
 
             foreach (Student i in SportsPlus.studentDictionary.Values)
             {
-                listBox2.Items.Add(i.Name + " " + i.StudentHouse);
+                listBox2.Items.Add(i.Name + " " + i.StudentHouse + ": " + i.TotalPoints.ToString());
             }
 
             foreach (List<Log> i in SportsPlus.eventLogs.Values)

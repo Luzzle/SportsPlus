@@ -46,6 +46,7 @@ namespace SportsPlus
         {
 
             WriteEventLogsToFile();
+            WritePointsToFile();
             Application.Exit();
 
         }
@@ -82,6 +83,27 @@ namespace SportsPlus
             }
 
             sw.Close();
+        }
+
+
+        private void WritePointsToFile()
+        {
+            File.WriteAllText(@"C:\SportsPlus\Points.csv", string.Empty);
+            StreamWriter sw = new StreamWriter(@"C:\SportsPlus\Points.csv", append: true);
+
+
+            foreach (KeyValuePair<string, Student> i in SportsPlus.studentDictionary)
+            {
+                string pointsLine = i.Key + "," + i.Value.TotalPoints;
+                sw.WriteLine(pointsLine);
+            }
+
+            sw.Close();
+        }
+
+        private void btnResetCarnival_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

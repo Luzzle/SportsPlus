@@ -51,6 +51,17 @@ namespace SportsPlus
                 AddAthlete(record);
             }
 
+
+            for (int i = 1; i <= AthleteCount; i++)
+            {
+
+                string id = (this.Controls["stuID" + i] as TextBox).Text;
+                int points = int.Parse((this.Controls["stuPoints" + i] as TextBox).Text);
+
+                SportsPlus.studentDictionary[id].TotalPoints -= points;
+
+            }
+                                
         }
 
         private void EmptyAthlete()
@@ -131,28 +142,18 @@ namespace SportsPlus
                 newLog.Place = int.Parse(tbPlaceRef.Text);
                 newLog.Points = int.Parse(tbPointsRef.Text);
 
-                SportsPlus.eventLogs[loadedEvent.ID].Add(newLog);
+                SportsPlus.studentDictionary[tbIDRef.Text].TotalPoints += int.Parse(tbPointsRef.Text);
 
+                SportsPlus.eventLogs[loadedEvent.ID].Add(newLog);
             }
 
         }
 
         private void btnSaveEvent_Click(object sender, EventArgs e)
         {
-            try
-            {
 
-                SaveEvent();
-                this.Close();
-
-            }
-            catch(Exception ex)
-            {
-
-                MessageBox.Show("There was an error saving the event, please fill out all fields!");
-                return;
-
-            }
+            this.Close();
+            
         }
 
         private void createIDTB(string Text = "")

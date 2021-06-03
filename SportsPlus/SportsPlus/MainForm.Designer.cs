@@ -34,7 +34,6 @@ namespace SportsPlus
             this.btnResetCarnival = new System.Windows.Forms.Button();
             this.btnBackups = new System.Windows.Forms.Button();
             this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.btnImportData = new System.Windows.Forms.Button();
             this.btnLogEvent = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,7 +69,6 @@ namespace SportsPlus
             this.panel1.Controls.Add(this.btnResetCarnival);
             this.panel1.Controls.Add(this.btnBackups);
             this.panel1.Controls.Add(this.btnGenerateReport);
-            this.panel1.Controls.Add(this.btnImportData);
             this.panel1.Controls.Add(this.btnLogEvent);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -84,7 +82,7 @@ namespace SportsPlus
             this.btnDebug.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDebug.FlatAppearance.BorderSize = 0;
             this.btnDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebug.Location = new System.Drawing.Point(0, 375);
+            this.btnDebug.Location = new System.Drawing.Point(0, 318);
             this.btnDebug.Name = "btnDebug";
             this.btnDebug.Size = new System.Drawing.Size(198, 57);
             this.btnDebug.TabIndex = 5;
@@ -98,20 +96,21 @@ namespace SportsPlus
             this.btnResetCarnival.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnResetCarnival.FlatAppearance.BorderSize = 0;
             this.btnResetCarnival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetCarnival.Location = new System.Drawing.Point(0, 318);
+            this.btnResetCarnival.Location = new System.Drawing.Point(0, 261);
             this.btnResetCarnival.Name = "btnResetCarnival";
             this.btnResetCarnival.Size = new System.Drawing.Size(198, 57);
             this.btnResetCarnival.TabIndex = 5;
             this.btnResetCarnival.Text = "Reset Carnival";
             this.btnResetCarnival.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnResetCarnival.UseVisualStyleBackColor = true;
+            this.btnResetCarnival.Click += new System.EventHandler(this.btnResetCarnival_Click);
             // 
             // btnBackups
             // 
             this.btnBackups.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBackups.FlatAppearance.BorderSize = 0;
             this.btnBackups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackups.Location = new System.Drawing.Point(0, 261);
+            this.btnBackups.Location = new System.Drawing.Point(0, 204);
             this.btnBackups.Name = "btnBackups";
             this.btnBackups.Size = new System.Drawing.Size(198, 57);
             this.btnBackups.TabIndex = 4;
@@ -124,26 +123,13 @@ namespace SportsPlus
             this.btnGenerateReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGenerateReport.FlatAppearance.BorderSize = 0;
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateReport.Location = new System.Drawing.Point(0, 204);
+            this.btnGenerateReport.Location = new System.Drawing.Point(0, 147);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(198, 57);
             this.btnGenerateReport.TabIndex = 3;
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerateReport.UseVisualStyleBackColor = true;
-            // 
-            // btnImportData
-            // 
-            this.btnImportData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImportData.FlatAppearance.BorderSize = 0;
-            this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportData.Location = new System.Drawing.Point(0, 147);
-            this.btnImportData.Name = "btnImportData";
-            this.btnImportData.Size = new System.Drawing.Size(198, 57);
-            this.btnImportData.TabIndex = 2;
-            this.btnImportData.Text = "Import Data";
-            this.btnImportData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImportData.UseVisualStyleBackColor = true;
             // 
             // btnLogEvent
             // 
@@ -375,7 +361,6 @@ namespace SportsPlus
         private System.Windows.Forms.Button btnResetCarnival;
         private System.Windows.Forms.Button btnBackups;
         private System.Windows.Forms.Button btnGenerateReport;
-        private System.Windows.Forms.Button btnImportData;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
