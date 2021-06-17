@@ -1,45 +1,51 @@
-﻿using System;
+﻿//
+//  SportsPlus - Debug.cs
+//  Developed by Cristian Lustri
+//  Copyright 2021 - All Rights Reserved
+//  Source Code Licenced under the M.I.T License - https://opensource.org/licenses/MIT
+//
+
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SportsPlus
 {
     public partial class Debug : Form
     {
+        // Form Contructor - Non modified
         public Debug()
         {
             InitializeComponent();
         }
 
+
+        // Load Function
         private void Debug_Load(object sender, EventArgs e)
         {
+            // Loop through all events and add to Event Listbox
             foreach (Event i in SportsPlus.eventDictionary.Values)
             {
-                listBox1.Items.Add(i.Event_Name + ": " + i.Distance.ToString());
+                listEvents.Items.Add(i.Event_Name + ": " + i.Distance.ToString());
 ;           }
 
+            // Loop through all students and add to the Student Listbox
             foreach (Student i in SportsPlus.studentDictionary.Values)
             {
-                listBox2.Items.Add(i.Name + " " + i.StudentHouse + ": " + i.TotalPoints.ToString());
+                listStudents.Items.Add(i.Name + " " + i.StudentHouse + ": " + i.TotalPoints.ToString());
             }
 
+            // Loop through every single event log and add to the Logs Listbox
             foreach (List<Log> i in SportsPlus.eventLogs.Values)
             {
                 for (int k = 0; k < i.Count; k++)
                 {
-                    listBox3.Items.Add(i[k].studentDetails.Name + ": " + i[k].TD);
+                    listLogs.Items.Add(i[k].studentDetails.Name + ": " + i[k].TD);
                 }
             }
 
         }
 
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

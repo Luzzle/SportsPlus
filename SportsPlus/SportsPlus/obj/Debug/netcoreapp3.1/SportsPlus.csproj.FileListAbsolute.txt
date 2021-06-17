@@ -38,3 +38,4 @@ C:\Users\64789\Documents\Github\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netco
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.Debug.resources
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.LogEvent.resources
 C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.SelectEvent.resources
+C:\Users\Cristian\Documents\GitHub\SportsPlus\SportsPlus\SportsPlus\obj\Debug\netcoreapp3.1\SportsPlus.ReportGenerator.resources

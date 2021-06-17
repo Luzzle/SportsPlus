@@ -80,12 +80,13 @@ namespace SportsPlus
             // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.Location = new System.Drawing.Point(24, 30);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(458, 48);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Log Event - ";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblStuID
             // 
@@ -154,8 +155,9 @@ namespace SportsPlus
             this.Controls.Add(this.lblStuName);
             this.Controls.Add(this.lblStuID);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "LogEvent";
-            this.Text = "LogEvent";
+            this.Text = "Log Event";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogEvent_FormClosing);
             this.Load += new System.EventHandler(this.LogEvent_Load);
             this.panel1.ResumeLayout(false);

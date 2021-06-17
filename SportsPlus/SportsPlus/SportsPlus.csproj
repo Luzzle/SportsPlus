@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>SportsPlus.MainProgram</StartupObject>
+    <ApplicationIcon>SportsPlus - Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

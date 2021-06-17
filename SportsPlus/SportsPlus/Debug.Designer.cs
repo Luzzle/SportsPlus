@@ -28,50 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listEvents = new System.Windows.Forms.ListBox();
+            this.listStudents = new System.Windows.Forms.ListBox();
+            this.listLogs = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listEvents
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(366, 644);
-            this.listBox1.TabIndex = 0;
+            this.listEvents.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listEvents.FormattingEnabled = true;
+            this.listEvents.ItemHeight = 15;
+            this.listEvents.Location = new System.Drawing.Point(0, 0);
+            this.listEvents.Name = "listEvents";
+            this.listEvents.Size = new System.Drawing.Size(366, 644);
+            this.listEvents.TabIndex = 0;
             // 
-            // listBox2
+            // listStudents
             // 
-            this.listBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(366, 0);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(366, 644);
-            this.listBox2.TabIndex = 0;
+            this.listStudents.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listStudents.FormattingEnabled = true;
+            this.listStudents.ItemHeight = 15;
+            this.listStudents.Location = new System.Drawing.Point(366, 0);
+            this.listStudents.Name = "listStudents";
+            this.listStudents.Size = new System.Drawing.Size(366, 644);
+            this.listStudents.TabIndex = 0;
             // 
-            // listBox3
+            // listLogs
             // 
-            this.listBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(732, 0);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(378, 644);
-            this.listBox3.TabIndex = 0;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listLogs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listLogs.FormattingEnabled = true;
+            this.listLogs.ItemHeight = 15;
+            this.listLogs.Location = new System.Drawing.Point(732, 0);
+            this.listLogs.Name = "listLogs";
+            this.listLogs.Size = new System.Drawing.Size(378, 644);
+            this.listLogs.TabIndex = 0;
             // 
             // Debug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 644);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listLogs);
+            this.Controls.Add(this.listStudents);
+            this.Controls.Add(this.listEvents);
             this.Name = "Debug";
             this.Text = "Debug";
             this.Load += new System.EventHandler(this.Debug_Load);
@@ -81,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listEvents;
+        private System.Windows.Forms.ListBox listStudents;
+        private System.Windows.Forms.ListBox listLogs;
     }
 }

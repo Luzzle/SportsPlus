@@ -115,7 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SelectEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectEvent";
+            this.Text = "Select Event";
             this.Load += new System.EventHandler(this.SelectEvent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,6 +16,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ReportGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SelectEvent.cs">
       <SubType>Form</SubType>
     </Compile>

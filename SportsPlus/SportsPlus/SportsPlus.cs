@@ -1,4 +1,12 @@
-﻿using System;
+﻿//
+//  SportsPlus - SportsPlus.cs
+//  Developed by Cristian Lustri
+//  Copyright 2021 - All Rights Reserved
+//  Source Code Licenced under the M.I.T License - https://opensource.org/licenses/MIT
+//
+
+
+using System;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
@@ -48,43 +56,49 @@ namespace SportsPlus
                 File.WriteAllText(@"C:\SportsPlus\Students.csv", STUDENT_PLACEHOLDER_STRING);
             }
 
-            // Create blank records file
+            // Create blank Points file
             if (!File.Exists(@"C:\SportsPlus\Points.csv")) { 
                 FileStream fs = File.Create(@"C:\SportsPlus\Points.csv");
                 fs.Close();
             }
 
-            // Create blank records file
+            // Create blank Events file
             if (!File.Exists(@"C:\SportsPlus\Events.csv")) {
                 FileStream fs = File.Create(@"C:\SportsPlus\Events.csv");
                 fs.Close();
             }
-
+            
+            // Create blank Logs File
             if (!File.Exists(@"C:\SportsPlus\Logs.csv"))
             {
                 FileStream fs = File.Create(@"C:\SportsPlus\Logs.csv");
                 fs.Close();
             }
 
-            // TODO: ADD THE REST OF THE CHECKS LATER
+            
 
         }
 
 
+        // Loads the events CSV into the dictionary.
         private static void LoadEvents()
         {
+            
             string[] eventsList = File.ReadAllLines(@"C:\SportsPlus\Events.csv");
 
+            // Checks to make sure there are events in the CSV
             if (eventsList.Length == 0)
             {
                 MessageBox.Show("Please add events to the EventsList csv.", "Error Detected", MessageBoxButtons.OK);
                 Environment.Exit(0);
             }
 
+            // Loops through each event
             for (int i = 0; i < eventsList.Length; i++)
             {
                 string[] eventData = eventsList[i].Split(",");
-
+                
+                // Create the new Event Object
                 Event eventObj = new Event();
                 eventObj.ID = eventData[0];
                 eventObj.Event_Name = eventData[1];
@@ -96,7 +110,8 @@ namespace SportsPlus
 
                 eventDictionary.Add(eventData[0], eventObj);
             }
-
+            
+            // Loads the logs CSV
             string[] eventLogs = File.ReadAllLines(@"C:\SportsPlus\Logs.csv");
 
 
@@ -105,19 +120,23 @@ namespace SportsPlus
 
                 string[] lineSplit = eventLogs[i].Split(",");
                 int logCount = 0;
+
+                // Creates the list of logs
                 List<Log> LogList = new List<Log>();
     
+                // Checks if the line begins with EA, if so it is an event and proceed to load in the athletes.
                 if (lineSplit[0].StartsWith("EA"))
                 {
                     logCount = int.Parse(lineSplit[1]);
 
-
+                    // Loop through each log
                     for (int k = 1; k <= logCount; k++)
                     {
                         string[] logEntry = eventLogs[i + k].Split(",");
 
                         Student studentRef = SportsPlus.studentDictionary[logEntry[0]];
 
+                        // Create the log object and push it to the list
                         Log newLog = new Log();
                         newLog.studentDetails = studentRef;
                         newLog.TD = int.Parse(logEntry[1]);
@@ -127,6 +146,7 @@ namespace SportsPlus
                         LogList.Add(newLog);
                     }
 
+                    // Create the entry in the dictionary
                     SportsPlus.eventLogs.Add(lineSplit[0], LogList);
 
                 }
@@ -139,8 +159,10 @@ namespace SportsPlus
 
         private static void LoadPoints()
         {
+            // Load the points CSV.
             string[] pointsList = File.ReadAllLines(@"C:\SportsPlus\Points.csv");
 
+            // For each entry, add the appropriate point data to each student.
             for (int i = 0; i < pointsList.Length; i++)
             {
 
